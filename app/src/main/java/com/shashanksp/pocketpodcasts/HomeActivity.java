@@ -24,24 +24,24 @@ public class HomeActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
 
-        // Logout button click listener
-//        binding.logoutButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                // Clear the login status in SharedPreferences
-//                SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-//                SharedPreferences.Editor editor = sharedPreferences.edit();
-//                editor.putBoolean("isLoggedIn", false);
-//                editor.apply();
-//
-//                // Sign out the current user
-//                mAuth.signOut();
-//
-//                // Redirect to the LoginActivity
-//                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        });
+         //Logout button click listener
+        binding.logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Clear the login status in SharedPreferences
+                SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean("isLoggedIn", false);
+                editor.apply();
+
+                // Sign out the current user
+                mAuth.signOut();
+
+                // Redirect to the LoginActivity
+                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }

@@ -24,15 +24,7 @@ public class RegisterActivity extends AppCompatActivity {
     private boolean passwordVisbile;
     private boolean cnfpasswordVisbile;
     private FirebaseAuth mAuth;
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
-            //reload();
-        }
-    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

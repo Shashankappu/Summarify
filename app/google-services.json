@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "409227013288",
+    "project_id": "miniproject-10f88",
+    "storage_bucket": "miniproject-10f88.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409227013288:android:32af338de4ffcf5893269d",
+        "android_client_info": {
+          "package_name": "com.shashanksp.pocketpodcasts"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2Nu959aNqI9VhoRXwPmQ6uHcNF3gMC8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

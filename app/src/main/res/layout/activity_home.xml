@@ -9,8 +9,8 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#01575C"
+        android:layout_height="55dp"
+        android:background="#09A5BA"
         android:elevation="4dp">
         <TextView
             android:layout_width="wrap_content"
@@ -18,7 +18,7 @@
             android:text="@string/app_name"
             android:fontFamily="@font/regarnlights"
             android:textColor="@color/white"
-            android:paddingTop="15dp"
+            android:paddingTop="10dp"
             android:textSize="30dp"/>
         <ImageButton
             android:id="@+id/logoutButton"

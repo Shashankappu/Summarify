@@ -14,7 +14,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/regarnlights"
-        android:text="Pocketpodcast"
+        android:text="@string/app_name"
         android:textColor="@color/Robin_egg_blue"
         android:textSize="34sp"
         android:textStyle="bold" />

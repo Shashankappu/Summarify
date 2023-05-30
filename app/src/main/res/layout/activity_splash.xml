@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
         android:gravity="center"
-        android:fontFamily="@font/aliennytmare"
+        android:fontFamily="@font/darklarchpersonaluseonly"
         android:textColor="@color/white"
         android:textSize="32sp"
         android:text="Loading...." />

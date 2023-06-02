@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="Robin_egg_blue">#10C9D3</color>
     <color name="Toolbar_color">#09A5BA</color>
+    <color name="grey">#7A7A7A</color>
+    <color name="orange">#FF7700</color>
 </resources>

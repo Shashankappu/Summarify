@@ -55,7 +55,8 @@ public class HomeActivity extends AppCompatActivity implements  LinkDialog.LinkD
             @Override
             public void onClick(View view) {
                 //open interface to get user text.
-
+                Intent intent = new Intent(HomeActivity.this, SummarizeTextActivity.class);
+                startActivity(intent);
             }
         });
 

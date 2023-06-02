@@ -74,6 +74,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/summ_text_CV"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="0dp"

@@ -11,10 +11,10 @@ import android.view.View;
 import com.google.firebase.auth.FirebaseAuth;
 import com.shashanksp.pocketpodcasts.databinding.ActivityHomeBinding;
 
-public class HomeActivity extends AppCompatActivity {
+
+public class HomeActivity extends AppCompatActivity implements  LinkDialog.LinkDialogListener {
 
     private FirebaseAuth mAuth;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +22,6 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         mAuth = FirebaseAuth.getInstance();
-
 
          //Logout button click listener
         binding.logoutButton.setOnClickListener(new View.OnClickListener() {
@@ -43,5 +42,33 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        binding.LinkCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //open Interface to get user link
+                openDialog();
+            }
+        });
+
+        binding.summTextCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //open interface to get user text.
+
+            }
+        });
+
+    }
+    private void openDialog(){
+        LinkDialog linkDialog = new LinkDialog();
+        linkDialog.show(getSupportFragmentManager(),"Link Dialog");
+    }
+
+
+    //yet to implement
+    @Override
+    public void getLink(String ytlink) {
+        //get the Youtube link and send it to model
     }
 }

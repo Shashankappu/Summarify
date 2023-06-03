@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,14 +25,16 @@ public class LinkDialog extends AppCompatDialogFragment {
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-
+                            //nothing
                     }
                 })
                 .setPositiveButton("Summarize", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                            String ytlink = ytlinkEdt.getText().toString();
-                            linkDialogListener.getLink(ytlink);
+                        String ytlink = ytlinkEdt.getText().toString();
+                        linkDialogListener.getLink(ytlink);
+                        Intent intent = new Intent(getContext(),SummarizedActivity.class);
+                        startActivity(intent);
                     }
                 });
        ytlinkEdt =view.findViewById(R.id.link_edt);

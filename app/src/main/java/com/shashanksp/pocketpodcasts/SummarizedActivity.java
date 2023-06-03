@@ -2,25 +2,23 @@ package com.shashanksp.pocketpodcasts;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.shashanksp.pocketpodcasts.databinding.ActivitySummarizeTextBinding;
+import com.shashanksp.pocketpodcasts.databinding.ActivitySummarizedBinding;
 
-public class SummarizeTextActivity extends AppCompatActivity {
+public class SummarizedActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivitySummarizeTextBinding binding = ActivitySummarizeTextBinding.inflate(getLayoutInflater());
+        ActivitySummarizedBinding binding = ActivitySummarizedBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.summarizeBtn.setOnClickListener(new View.OnClickListener() {
+        binding.menuFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(SummarizeTextActivity.this,SummarizedActivity.class);
-                startActivity(i);
+                //convert on fab to multi fab and show bookmark and copy fabs optional convert to word or docs
             }
         });
         binding.backBtn.setOnClickListener(new View.OnClickListener() {

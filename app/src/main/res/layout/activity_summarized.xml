@@ -34,7 +34,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/text_input_CV"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="match_parent"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_below="@id/toolbar"
@@ -44,41 +44,39 @@
         android:layout_marginBottom="20dp"
         android:elevation="10dp">
 
-        <ScrollView
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:layout_marginBottom="10dp"
-                android:textColor="@color/black"
-                android:background="@color/white"
-                android:textSize="22sp"
-                android:fontFamily="@font/darklarchpersonaluseonly"
-                android:paddingStart="10dp"
-                android:gravity="start"
-                android:textColorHint="@color/grey"
-                android:hint="Enter your text here" />
-        </ScrollView>
-
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:textSize="22sp"
+            android:fontFamily="@font/darklarchpersonaluseonly"
+            android:paddingStart="10dp"
+            android:gravity="start"
+            android:text="Summarized text appears here" />
+<!--        <ImageButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/copy_btn"-->
+<!--            android:background="@color/white"-->
+<!--            android:layout_gravity="end"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            />-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/menu_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_btn"
+            android:backgroundTint="@color/orange"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:layout_marginEnd="10dp"/>
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/summarize_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_input_CV"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="@color/orange"
-        android:text="Summarize"
-        android:textSize="24sp"
-        android:fontFamily="@font/regarnlight"
-        android:textAllCaps="false" />
+
 
 
 

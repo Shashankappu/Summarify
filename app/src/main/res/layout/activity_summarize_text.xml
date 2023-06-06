@@ -30,17 +30,16 @@
             android:textSize="24sp"/>
 
     </androidx.appcompat.widget.Toolbar>
-
     <androidx.cardview.widget.CardView
         android:id="@+id/text_input_CV"
         android:layout_width="match_parent"
         android:layout_height="550dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/toolbar"
         app:cardCornerRadius="12dp"
         android:backgroundTint="@color/white"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="20dp"
         android:elevation="10dp">
 
@@ -55,14 +54,24 @@
                 android:textColor="@color/black"
                 android:background="@color/white"
                 android:textSize="22sp"
-                android:fontFamily="@font/darklarchpersonaluseonly"
-                android:paddingStart="10dp"
+                android:paddingStart="5dp"
+                android:fontFamily="sans-serif-condensed"
                 android:gravity="start"
                 android:textColorHint="@color/grey"
                 android:hint="Enter your text here" />
-        </ScrollView>
 
+        </ScrollView>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/paste_btn"
+            android:background="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="end"
+            android:alpha="0.7"
+            android:layout_marginEnd="15dp" />
     </androidx.cardview.widget.CardView>
+
 
     <Button
         android:id="@+id/summarize_btn"

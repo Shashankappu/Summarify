@@ -15,12 +15,6 @@ public class SummarizedActivity extends AppCompatActivity {
         ActivitySummarizedBinding binding = ActivitySummarizedBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-//        binding.menuFab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //convert on fab to multi fab and show bookmark and copy fabs optional convert to word or docs
-//            }
-//        });
         binding.backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

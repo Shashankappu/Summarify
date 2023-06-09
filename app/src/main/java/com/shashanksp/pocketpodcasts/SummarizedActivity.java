@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -22,13 +21,22 @@ public class SummarizedActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         // Initialize ClipboardManager
         clipboardManager = (ClipboardManager) getSystemService(SummarizedActivity.CLIPBOARD_SERVICE);
-        binding.resText.setText("Summarized text appears here!");
+        //binding.resText.setText("Summarized text appears here!");
+
+
+        String text = getIntent().getExtras().getString("summarized_text");
+
+
+        //just for now..
+        binding.resText.setText(text);
+
         binding.backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
             }
         });
+
         binding.copyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

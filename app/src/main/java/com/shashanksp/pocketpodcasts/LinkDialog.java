@@ -31,13 +31,14 @@ public class LinkDialog extends AppCompatDialogFragment {
                 .setPositiveButton("Summarize", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        //Summarizing from Link Code or Function goes here.
                         String ytlink = ytlinkEdt.getText().toString();
                         linkDialogListener.getLink(ytlink);
                         Intent intent = new Intent(getContext(),SummarizedActivity.class);
                         startActivity(intent);
                     }
                 });
-       ytlinkEdt =view.findViewById(R.id.link_edt);
+       ytlinkEdt = view.findViewById(R.id.link_edt);
         return builder.create();
     }
     @Override
@@ -48,7 +49,6 @@ public class LinkDialog extends AppCompatDialogFragment {
         }catch (ClassCastException e){
             throw new ClassCastException(context.toString()+"must implement DialogListener");
         }
-
     }
     public interface LinkDialogListener{
         void getLink(String ytlink);

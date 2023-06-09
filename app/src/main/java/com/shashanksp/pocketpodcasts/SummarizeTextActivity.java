@@ -19,12 +19,15 @@ public class SummarizeTextActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivitySummarizeTextBinding binding = ActivitySummarizeTextBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        clipboardManager = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
+        clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 
         binding.summarizeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(SummarizeTextActivity.this,SummarizedActivity.class);
+                //Summarize the text code or function goes  here.
+                String input_text = binding.inputEdt.getText().toString();
+                Intent i = new Intent(SummarizeTextActivity.this, SummarizedActivity.class);
+                i.putExtra("summarized_text", input_text);
                 startActivity(i);
             }
         });
@@ -38,17 +41,18 @@ public class SummarizeTextActivity extends AppCompatActivity {
         binding.pasteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    ClipData.Item item = clipboardManager.getPrimaryClip().getItemAt(0);
-                    String output = item.getText().toString();
+                ClipData.Item item = clipboardManager.getPrimaryClip().getItemAt(0);
+                String output = item.getText().toString();
 
-                    if(!output.isEmpty()){
-                        output = binding.inputEdt.getText() +output;
-                        binding.inputEdt.setText(output);
-                        binding.inputEdt.moveCursorToVisibleOffset();
-                    }else{
-                        Toast.makeText(SummarizeTextActivity.this,"No Text to paste",Toast.LENGTH_LONG).show();
-                    }
+                if (!output.isEmpty()) {
+                    output = binding.inputEdt.getText() + output;
+                    binding.inputEdt.setText(output);
+                    binding.inputEdt.moveCursorToVisibleOffset();
+                } else {
+                    Toast.makeText(SummarizeTextActivity.this, "No Text to paste", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
+
 }

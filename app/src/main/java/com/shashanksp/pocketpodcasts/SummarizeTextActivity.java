@@ -47,7 +47,7 @@ public class SummarizeTextActivity extends AppCompatActivity {
                 String output = item.getText().toString();
 
                 if (!output.isEmpty()) {
-                    output = binding.inputEdt.getText() + output;
+                    output = binding.inputEdt.getText() +output;
                     binding.inputEdt.setText(output);
                     binding.inputEdt.moveCursorToVisibleOffset();
                 } else {

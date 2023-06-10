@@ -14,18 +14,20 @@ import com.shashanksp.pocketpodcasts.databinding.ActivitySummarizeTextBinding;
 
 public class SummarizeTextActivity extends AppCompatActivity {
     ClipboardManager clipboardManager;
+    Summarizer summarizer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivitySummarizeTextBinding binding = ActivitySummarizeTextBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-
+        summarizer = new Summarizer();
         binding.summarizeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Summarize the text code or function goes  here.
                 String input_text = binding.inputEdt.getText().toString();
+                input_text = summarizer.Summarize(input_text,5);
                 Intent i = new Intent(SummarizeTextActivity.this, SummarizedActivity.class);
                 i.putExtra("summarized_text", input_text);
                 startActivity(i);

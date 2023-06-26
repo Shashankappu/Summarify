@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,91 +7,118 @@
     android:background="@color/Robin_egg_blue"
     tools:context=".SummarizeTextActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/Toolbar_color"
-        android:elevation="4dp">
-        <ImageButton
-            android:id="@+id/back_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#09A5BA"
-            android:src="@drawable/back_button" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:text="@string/app_name"
-            android:gravity="center_vertical|center_horizontal"
-            android:fontFamily="@font/regarnlights"
-            android:textColor="@color/white"
-            android:paddingTop="10dp"
-            android:textSize="24sp"/>
+        android:layout_height="match_parent"
+        android:background="@color/Robin_egg_blue"
+        tools:context=".SummarizeTextActivity">
 
-    </androidx.appcompat.widget.Toolbar>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/text_input_CV"
-        android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/toolbar"
-        app:cardCornerRadius="12dp"
-        android:backgroundTint="@color/white"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="20dp"
-        android:elevation="10dp">
-
-        <ScrollView
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <EditText
-                android:id="@+id/input_edt"
-                android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/Toolbar_color"
+            android:elevation="4dp">
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:textColor="@color/black"
+                android:backgroundTint="#09A5BA"
+                android:src="@drawable/back_button" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="@string/app_name"
+                android:gravity="center_vertical|center_horizontal"
+                android:fontFamily="@font/regarnlights"
+                android:textColor="@color/white"
+                android:paddingTop="10dp"
+                android:textSize="24sp"/>
+
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/text_input_CV"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/toolbar"
+            app:cardCornerRadius="12dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="10dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <EditText
+                    android:id="@+id/input_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:textSize="22sp"
+                    android:paddingStart="5dp"
+                    android:paddingBottom="15dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="start"
+                    android:textColorHint="@color/grey"
+                    android:hint="Enter your text here" />
+
+            </ScrollView>
+            <ImageButton
+                android:id="@+id/paste_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/paste_btn"
                 android:background="@color/white"
-                android:textSize="22sp"
-                android:paddingStart="5dp"
-                android:paddingBottom="15dp"
-                android:fontFamily="sans-serif-condensed"
-                android:gravity="start"
-                android:textColorHint="@color/grey"
-                android:hint="Enter your text here" />
+                android:layout_marginTop="15dp"
+                android:layout_gravity="end"
+                android:alpha="0.7"
+                android:layout_marginEnd="15dp" />
+        </androidx.cardview.widget.CardView>
 
-        </ScrollView>
-        <ImageButton
-            android:id="@+id/paste_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/paste_btn"
-            android:background="@color/white"
-            android:layout_marginTop="15dp"
-            android:layout_gravity="end"
-            android:alpha="0.7"
-            android:layout_marginEnd="15dp" />
-    </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/text_input_CV"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:weightSum="4">
 
-
-    <Button
-        android:id="@+id/summarize_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_input_CV"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="@color/orange"
-        android:text="Summarize"
-        android:textSize="24sp"
-        android:fontFamily="@font/regarnlight"
-        android:textAllCaps="false" />
+            <EditText
+                android:id="@+id/maxSize_edt"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="3"
+                android:background="@drawable/edittext_background"
+                android:backgroundTint="@color/white"
+                android:hint="Enter the Max Sentences"
+                android:paddingStart="20dp"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey" />
 
 
+            <Button
+                android:id="@+id/summarize_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/orange"
+                android:drawableLeft="@drawable/send_btn"
+                android:fontFamily="@font/regarnlight"
+                android:paddingStart="32dp"
+                android:textAllCaps="false" />
+        </LinearLayout>
 
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

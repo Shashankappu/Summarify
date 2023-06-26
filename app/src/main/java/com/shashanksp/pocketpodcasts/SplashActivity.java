@@ -19,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
         Thread timerThread = new Thread() {
             public void run() {
                 try {
-                    sleep(2000);//splash time
+                    sleep(4000);//splash time
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {

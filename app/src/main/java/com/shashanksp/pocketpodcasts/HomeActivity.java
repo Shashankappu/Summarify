@@ -43,13 +43,13 @@ public class HomeActivity extends AppCompatActivity implements  LinkDialog.LinkD
             }
         });
 
-        binding.LinkCV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //open Interface to get user link
-                openDialog();
-            }
-        });
+//        binding.LinkCV.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //open Interface to get user link
+//                openDialog();
+//            }
+//        });
 
         binding.summTextCV.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,10 +61,10 @@ public class HomeActivity extends AppCompatActivity implements  LinkDialog.LinkD
         });
 
     }
-    private void openDialog(){
-        LinkDialog linkDialog = new LinkDialog();
-        linkDialog.show(getSupportFragmentManager(),"Link Dialog");
-    }
+//    private void openDialog(){
+//        LinkDialog linkDialog = new LinkDialog();
+//        linkDialog.show(getSupportFragmentManager(),"Link Dialog");
+//    }
 
 
     //yet to implement

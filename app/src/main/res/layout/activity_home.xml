@@ -36,42 +36,43 @@
         android:layout_height="match_parent"
         android:weightSum="2"
         android:orientation="vertical"
+        android:gravity="center"
         android:background="@color/Robin_egg_blue">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/Link_CV"
-            android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:layout_height="0dp"
-            android:layout_margin="16dp"
-            app:cardCornerRadius="12dp">
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/Link_CV"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_margin="16dp"-->
+<!--            app:cardCornerRadius="12dp">-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="16dp">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical"-->
+<!--                android:gravity="center"-->
+<!--                android:padding="16dp">-->
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="5dp"
-                    android:src="@drawable/videolink_icon"
-                    android:layout_gravity="center_vertical|center_horizontal" />
+<!--                <ImageView-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    android:src="@drawable/videolink_icon"-->
+<!--                    android:layout_gravity="center_vertical|center_horizontal" />-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Extract and Summarize from Link"
-                    android:textColor="@color/black"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/regarnlights"
-                    android:textSize="34sp"/>
-            </LinearLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Extract and Summarize from Link"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:fontFamily="@font/regarnlights"-->
+<!--                    android:textSize="34sp"/>-->
+<!--            </LinearLayout>-->
 
-        </androidx.cardview.widget.CardView>
+<!--        </androidx.cardview.widget.CardView>-->
 
         <androidx.cardview.widget.CardView
             android:id="@+id/summ_text_CV"
@@ -79,7 +80,9 @@
             android:layout_weight="1"
             android:layout_height="0dp"
             android:layout_margin="16dp"
+            android:elevation="25dp"
             android:backgroundTint="@color/white"
+            android:outlineAmbientShadowColor="@color/grey"
             app:cardCornerRadius="12dp">
 
             <LinearLayout

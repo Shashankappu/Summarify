@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Robin_egg_blue"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
@@ -34,52 +34,35 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="2"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="@color/Robin_egg_blue">
+        android:background="@color/white">
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:src="@drawable/homeillustration"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
 
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:id="@+id/Link_CV"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_weight="1"-->
-<!--            android:backgroundTint="@color/white"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_margin="16dp"-->
-<!--            app:cardCornerRadius="12dp">-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:orientation="vertical"-->
-<!--                android:gravity="center"-->
-<!--                android:padding="16dp">-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="100dp"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:layout_margin="5dp"-->
-<!--                    android:src="@drawable/videolink_icon"-->
-<!--                    android:layout_gravity="center_vertical|center_horizontal" />-->
-
-<!--                <TextView-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="Extract and Summarize from Link"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:textAlignment="center"-->
-<!--                    android:fontFamily="@font/regarnlights"-->
-<!--                    android:textSize="34sp"/>-->
-<!--            </LinearLayout>-->
-
-<!--        </androidx.cardview.widget.CardView>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/regarnlights"
+            android:gravity="center"
+            android:text="Hey! Welcome to Summarify"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/summ_text_CV"
             android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="0dp"
-            android:layout_margin="16dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="40dp"
             android:elevation="25dp"
             android:backgroundTint="@color/white"
             android:outlineAmbientShadowColor="@color/grey"
@@ -89,25 +72,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:gravity="center"
-                android:padding="16dp">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="5dp"
-                    android:src="@drawable/textnote_icon"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                    />
+                android:background="@color/Robin_egg_blue"
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Summarize Text"
+                    android:drawableEnd="@drawable/forward_icon"
                     android:fontFamily="@font/regarnlights"
-                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:paddingEnd="20dp"
+                    android:text="Summarize Text"
                     android:textAlignment="center"
-                    android:textSize="34sp"/>
+                    android:textColor="@color/white"
+                    android:textSize="28sp" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>

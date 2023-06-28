@@ -52,14 +52,14 @@
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <EditText
+                EditText
                     android:id="@+id/input_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:textColor="@color/black"
                     android:background="@color/white"
-                    android:textSize="22sp"
+                    android:textSize="18sp"
                     android:paddingStart="5dp"
                     android:paddingBottom="15dp"
                     android:fontFamily="sans-serif-condensed"
@@ -84,10 +84,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/text_input_CV"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="0dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="0dp"
             android:orientation="horizontal"
             android:layout_alignParentBottom="true"
             android:weightSum="4">
@@ -103,6 +103,7 @@
                 android:hint="Enter the Max Sentences"
                 android:paddingStart="20dp"
                 android:inputType="number"
+                android:layout_gravity="center"
                 android:textColor="@color/black"
                 android:textColorHint="@color/grey" />
 
@@ -110,13 +111,14 @@
             <Button
                 android:id="@+id/summarize_btn"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
                 android:layout_weight="1"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/forward_icon"
                 android:background="@drawable/button_background"
                 android:backgroundTint="@color/orange"
-                android:drawableLeft="@drawable/send_btn"
                 android:fontFamily="@font/regarnlight"
-                android:paddingStart="32dp"
+                android:paddingStart="24dp"
                 android:textAllCaps="false" />
         </LinearLayout>
 

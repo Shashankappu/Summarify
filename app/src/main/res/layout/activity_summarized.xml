@@ -55,7 +55,7 @@
             android:layout_margin="10dp"
             android:textColor="@color/black"
             android:background="@color/white"
-            android:textSize="22sp"
+            android:textSize="18sp"
             android:fontFamily="sans-serif-condensed"
             android:gravity="start"
             android:hint="Summarized text appears here" />

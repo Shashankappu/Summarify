@@ -10,7 +10,19 @@ It allows users to input text and receive a concise summary of the content. This
 3) Permissions: The app requires the WRITE_EXTERNAL_STORAGE permission to store and access necessary data.
 
 **ScreenShots**
+
+   **SPLASH** : https://github.com/Shashankappu/summarify/blob/b822953af8349067f94490898c640f41b006b4be/UI%20Screenshots/Splash%201.jpg
    
+   **CREATE ACCOUNT** : https://github.com/Shashankappu/summarify/blob/b822953af8349067f94490898c640f41b006b4be/UI%20Screenshots/Create%20account%203.jpg
+   
+   **LOGIN** : https://github.com/Shashankappu/summarify/blob/b822953af8349067f94490898c640f41b006b4be/UI%20Screenshots/Login%202.jpg
+   
+   **HOME** : https://github.com/Shashankappu/summarify/blob/b822953af8349067f94490898c640f41b006b4be/UI%20Screenshots/Home%204.jpg
+   
+   **SUMMARIZING** : https://github.com/Shashankappu/summarify/blob/b822953af8349067f94490898c640f41b006b4be/UI%20Screenshots/summarize%205.jpg
+   
+   **RESULTS** : https://github.com/Shashankappu/summarify/blob/b822953af8349067f94490898c640f41b006b4be/UI%20Screenshots/Results%206.jpg
+  
 
 
 **Installation**

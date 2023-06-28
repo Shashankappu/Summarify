@@ -11,19 +11,11 @@ It allows users to input text and receive a concise summary of the content. This
 
 **ScreenShots**
 
-   **SPLASH** : https://github.com/Shashankappu/summarify/blob/b822953af8349067f94490898c640f41b006b4be/UI%20Screenshots/Splash%201.jpg
-   
-   **CREATE ACCOUNT** : https://github.com/Shashankappu/summarify/blob/b822953af8349067f94490898c640f41b006b4be/UI%20Screenshots/Create%20account%203.jpg
-   
-   **LOGIN** : https://github.com/Shashankappu/summarify/blob/b822953af8349067f94490898c640f41b006b4be/UI%20Screenshots/Login%202.jpg
-   
-   **HOME** : https://github.com/Shashankappu/summarify/blob/b822953af8349067f94490898c640f41b006b4be/UI%20Screenshots/Home%204.jpg
-   
-   **SUMMARIZING** : https://github.com/Shashankappu/summarify/blob/b822953af8349067f94490898c640f41b006b4be/UI%20Screenshots/summarize%205.jpg
-   
-   **RESULTS** : https://github.com/Shashankappu/summarify/blob/b822953af8349067f94490898c640f41b006b4be/UI%20Screenshots/Results%206.jpg
+  
+  ![ui 1](https://github.com/Shashankappu/summarify/assets/50190738/73d2990f-44c1-41ca-923d-e4faffe8e856)
   
 
+  ![ui 2](https://github.com/Shashankappu/summarify/assets/50190738/dfc24cfa-86f9-4399-9928-92b2c61814f7)
 
 **Installation**
 

@@ -9,6 +9,7 @@ It allows users to input text and receive a concise summary of the content. This
 2) User-friendly Interface: The app offers a simple and intuitive user interface, making it easy for users to input text and view the generated summaries.
 
 **ScreenShots**
+
 ![Slide1](https://github.com/Shashankappu/summarify/assets/50190738/fdcbf8bb-097f-4b0a-a1c0-4743cc60f64e)
 ![Slide2](https://github.com/Shashankappu/summarify/assets/50190738/d30f7047-f803-4fd0-8ab6-aa05fa0c5143)
 

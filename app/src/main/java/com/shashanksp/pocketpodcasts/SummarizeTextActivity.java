@@ -22,7 +22,7 @@ public class SummarizeTextActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
         summarizer = new Summarizer();
-        binding.summarizeBtn.setOnClickListener(new View.OnClickListener() {
+        binding.maxSizeEdt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Summarize the text code or function goes  here.

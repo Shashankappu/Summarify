@@ -26,7 +26,6 @@ public class SummarizedActivity extends AppCompatActivity {
 
         String text = getIntent().getExtras().getString("summarized_text");
 
-
         //just for now.
         binding.resText.setText(text);
 

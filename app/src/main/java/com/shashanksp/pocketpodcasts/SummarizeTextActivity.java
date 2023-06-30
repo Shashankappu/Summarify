@@ -22,7 +22,8 @@ public class SummarizeTextActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
         summarizer = new Summarizer();
-        binding.maxSizeEdt.setOnClickListener(new View.OnClickListener() {
+        binding.maxSizeEdt.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view) {
                 //Summarize the text code or function goes  here.
@@ -31,6 +32,7 @@ public class SummarizeTextActivity extends AppCompatActivity {
                 if(!Str_maxi.isEmpty()){
                     int maxSize = Integer.parseInt(Str_maxi);
                     input_text = summarizer.Summarize(input_text,maxSize);
+                    binding.maxSizeEdt.setText("");
                     Intent i = new Intent(SummarizeTextActivity.this, SummarizedActivity.class);
                     i.putExtra("summarized_text", input_text);
                     startActivity(i);

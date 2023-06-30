@@ -7,15 +7,13 @@ It allows users to input text and receive a concise summary of the content. This
 
 1) Text Summarization: Summarify utilizes advanced natural language processing algorithms to generate concise summaries of inputted text.
 2) User-friendly Interface: The app offers a simple and intuitive user interface, making it easy for users to input text and view the generated summaries.
-3) Permissions: The app requires the WRITE_EXTERNAL_STORAGE permission to store and access necessary data.
 
 **ScreenShots**
 
-  
-  ![ui 1](https://github.com/Shashankappu/summarify/assets/50190738/73d2990f-44c1-41ca-923d-e4faffe8e856)
-  
+![page 1](https://github.com/Shashankappu/Summarify/assets/50190738/9799e6c7-4ba8-43a8-8756-ec97ef5d7862)
+![page 2](https://github.com/Shashankappu/Summarify/assets/50190738/ea3dc87b-3c7a-49be-920a-5f09e6424014)
 
-  ![ui 2](https://github.com/Shashankappu/summarify/assets/50190738/dfc24cfa-86f9-4399-9928-92b2c61814f7)
+
 
 **Installation**
 

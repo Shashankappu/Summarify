@@ -54,12 +54,12 @@ public class SummarizeTextActivity extends AppCompatActivity {
                 ClipData.Item item = clipboardManager.getPrimaryClip().getItemAt(0);
                 String output = item.getText().toString();
 
-                if (!output.isEmpty()) {
-                    output = binding.inputEdt.getText() +output;
+                if (!output.isBlank()) {
+                    output = binding.inputEdt.getText() + output;
                     binding.inputEdt.setText(output);
                     binding.inputEdt.moveCursorToVisibleOffset();
                 } else {
-                    Toast.makeText(SummarizeTextActivity.this, "No Text to paste", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SummarizeTextActivity.this, "No Text to paste", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -66,7 +66,7 @@
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="start"
                     android:textColorHint="@color/grey"
-                    android:hint="Enter your text here" />
+                    android:hint="Enter your text here !!" />
             </ScrollView>
 
             <ImageButton
@@ -102,11 +102,16 @@
                 android:drawableTint="@color/Robin_egg_blue"
                 android:background="@drawable/edittext_background"
                 android:backgroundTint="@color/white"
-                android:hint="Enter the Max Sentences"
+                android:hint="Enter the Max number of Sentences"
                 android:paddingStart="20dp"
                 android:paddingEnd="10dp"
                 android:inputType="number"
+                android:elevation="30dp"
+                android:shadowDy="100"
+                android:shadowDx="100"
+                android:shadowColor="@color/black"
                 android:layout_gravity="center"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/grey" />
         </LinearLayout>

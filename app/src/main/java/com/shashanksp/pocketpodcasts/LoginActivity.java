@@ -53,7 +53,11 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Log in the user
-                login(emailEditText.getText().toString(), passwordEditText.getText().toString());
+                if(!(emailEditText.getText().toString().equals("") || passwordEditText.getText().toString().equals(""))) {
+                    login(emailEditText.getText().toString(), passwordEditText.getText().toString());
+                }else{
+                    Toast.makeText(LoginActivity.this, "Invalid Email or Password", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

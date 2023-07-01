@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.shashanksp.pocketpodcasts.databinding.ActivityHomeBinding;
 
 
-public class HomeActivity extends AppCompatActivity implements  LinkDialog.LinkDialogListener {
+public class HomeActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     @Override
@@ -43,15 +43,7 @@ public class HomeActivity extends AppCompatActivity implements  LinkDialog.LinkD
             }
         });
 
-//        binding.LinkCV.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //open Interface to get user link
-//                openDialog();
-//            }
-//        });
-
-        binding.summTextCV.setOnClickListener(new View.OnClickListener() {
+        binding.SummtextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //open interface to get user text.
@@ -61,15 +53,5 @@ public class HomeActivity extends AppCompatActivity implements  LinkDialog.LinkD
         });
 
     }
-//    private void openDialog(){
-//        LinkDialog linkDialog = new LinkDialog();
-//        linkDialog.show(getSupportFragmentManager(),"Link Dialog");
-//    }
 
-
-    //yet to implement
-    @Override
-    public void getLink(String ytlink) {
-        //get the Youtube link and send it to model
-    }
 }

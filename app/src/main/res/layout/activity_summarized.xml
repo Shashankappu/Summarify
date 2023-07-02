@@ -104,7 +104,7 @@
             android:id="@+id/bookmark_Btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Bookmark"
+            android:text="Bookmark It"
             android:textAllCaps="false"
             android:background="@drawable/button_background"
             android:backgroundTint="@color/orange"

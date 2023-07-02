@@ -32,7 +32,7 @@ public class SummarizedActivity extends AppCompatActivity {
     String input;
     boolean isMicOn = false;
     private TextToSpeech textToSpeech;
-    int i=0;
+    static int count=0;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference storeRef = database.getReference("Bookmarked_text");
 
@@ -173,7 +173,7 @@ public class SummarizedActivity extends AppCompatActivity {
         notificationManager.cancel(1); // Cancels the notification with the specified ID (1 in this case)
     }
     private void addToBookmarks(String summ_text){
-        storeRef.child(String.valueOf(i++)).setValue(summ_text).addOnCompleteListener(new OnCompleteListener<Void>() {
+        storeRef.child(String.valueOf(count++)).setValue(summ_text).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 Toast.makeText(SummarizedActivity.this,"Text Bookmarked!",Toast.LENGTH_LONG).show();

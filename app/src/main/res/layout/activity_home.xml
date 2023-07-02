@@ -29,6 +29,14 @@
             android:src="@drawable/logout"
             android:layout_gravity="end"
             android:layout_marginEnd="5dp"/>
+        <ImageButton
+            android:id="@+id/bookmark_Btn"
+            android:backgroundTint="@color/Toolbar_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bookmarks_icon"
+            android:layout_gravity="end"
+            android:layout_marginEnd="5dp"/>
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
@@ -37,7 +45,7 @@
         android:orientation="vertical"
         android:gravity="center"
         android:background="@color/white">
-            <ImageView
+        <ImageView
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:src="@drawable/homeillustration"
@@ -101,7 +109,6 @@
             android:textColor="@color/white"
             android:elevation="20dp"/>
     </LinearLayout>
-
     </LinearLayout>
 
 </LinearLayout>

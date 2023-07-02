@@ -15,6 +15,7 @@ import com.shashanksp.pocketpodcasts.databinding.ActivitySummarizeTextBinding;
 public class SummarizeTextActivity extends AppCompatActivity {
     ClipboardManager clipboardManager;
     Summarizer summarizer;
+    BERTSummarizer bertSummarizer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,10 @@ public class SummarizeTextActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
         summarizer = new Summarizer();
+        //bertSummarizer = new BERTSummarizer();
+//        String modelPath = "C:\\Users\\Shashankappu\\Pocketpodcasts\\app\\src\\main\\res\\bert_model.pb";
+//        bertSummarizer.loadModel(modelPath);
+
         binding.maxSizeEdt.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -32,6 +37,7 @@ public class SummarizeTextActivity extends AppCompatActivity {
                 if(!Str_maxi.isEmpty()){
                     int maxSize = Integer.parseInt(Str_maxi);
                     input_text = summarizer.Summarize(input_text,maxSize);
+//                    String summary = bertSummarizer.summarizeText(input_text);
                     binding.maxSizeEdt.setText("");
                     Intent i = new Intent(SummarizeTextActivity.this, SummarizedActivity.class);
                     i.putExtra("summarized_text", input_text);

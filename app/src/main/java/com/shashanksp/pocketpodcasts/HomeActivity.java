@@ -42,6 +42,13 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
             }
         });
+        binding.bookmarkBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(HomeActivity.this,BookmarksActivity.class);
+                startActivity(i);
+            }
+        });
 
         binding.SummtextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +58,6 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 
 }

@@ -47,7 +47,10 @@ dependencies {
 
     implementation 'com.airbnb.android:lottie:6.0.1'
 
-
+    //FOR BERT SUMMARIZER
+    implementation("org.tensorflow:tensorflow:1.15.0")
+    implementation("org.tensorflow:libtensorflow:1.15.0")
+    implementation("org.tensorflow:proto:1.15.0")
 
 
 }

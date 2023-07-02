@@ -28,6 +28,14 @@
             android:textColor="@color/white"
             android:paddingTop="10dp"
             android:textSize="24sp"/>
+        <ImageButton
+            android:id="@+id/all_bookmarks_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#09A5BA"
+            android:layout_gravity="end"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/bookmarks_icon" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -80,28 +88,31 @@
         android:orientation="horizontal">
         <Button
             android:id="@+id/copy_btn"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Copy"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/Robin_egg_blue"
+            android:layout_marginStart="10dp"
+            android:elevation="20dp"
+            android:layout_marginEnd="5dp"
+            android:textAllCaps="false"
+            android:textSize="18sp"/>
+        <Button
+            android:id="@+id/bookmark_Btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Bookmark"
+            android:textAllCaps="false"
             android:background="@drawable/button_background"
             android:backgroundTint="@color/orange"
-            android:textColor="@color/white"
-            android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:textAllCaps="false"
-            android:textSize="20sp"/>
-<!--        <Button-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Bookmark"-->
-<!--            android:textAllCaps="false"-->
-<!--            android:background="@drawable/button_background"-->
-<!--            android:backgroundTint="@color/orange"-->
-<!--            android:layout_marginEnd="10dp"-->
-<!--            android:textSize="18sp"-->
-<!--            android:elevation="20dp"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:layout_marginStart="10dp"-->
-<!--            android:layout_weight="1"/>-->
+            android:textSize="18sp"
+            android:elevation="20dp"
+            android:textColor="@color/white"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"/>
     </LinearLayout>
 </RelativeLayout>

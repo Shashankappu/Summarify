@@ -1,15 +1,16 @@
 package com.shashanksp.pocketpodcasts;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
-import androidx.core.content.res.ResourcesCompat;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -17,6 +18,10 @@ import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.shashanksp.pocketpodcasts.databinding.ActivitySummarizedBinding;
 
 import java.util.Locale;
@@ -27,6 +32,10 @@ public class SummarizedActivity extends AppCompatActivity {
     String input;
     boolean isMicOn = false;
     private TextToSpeech textToSpeech;
+    int i=0;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference storeRef = database.getReference("Bookmarked_text");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +61,7 @@ public class SummarizedActivity extends AppCompatActivity {
                 }
             }
         });
+        //TTS button
         binding.micBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +80,7 @@ public class SummarizedActivity extends AppCompatActivity {
                 }
             }
         });
-
+        //Back Btn
         binding.backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,7 +89,7 @@ public class SummarizedActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
+        //Copy btn
         binding.copyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,6 +101,23 @@ public class SummarizedActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(SummarizedActivity.this, "Text not Copied", Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+
+        //bookmark text save it in firebase database
+        binding.bookmarkBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addToBookmarks(binding.resText.getText().toString());
+            }
+        });
+
+        //Show BookmarksActivity
+        binding.allBookmarksBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(SummarizedActivity.this, BookmarksActivity.class);
+                startActivity(i);
             }
         });
     }
@@ -144,6 +171,14 @@ public class SummarizedActivity extends AppCompatActivity {
     private void hideTTSNotification() {
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
         notificationManager.cancel(1); // Cancels the notification with the specified ID (1 in this case)
+    }
+    private void addToBookmarks(String summ_text){
+        storeRef.child(String.valueOf(i++)).setValue(summ_text).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                Toast.makeText(SummarizedActivity.this,"Text Bookmarked!",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
 

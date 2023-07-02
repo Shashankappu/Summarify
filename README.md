@@ -1,7 +1,8 @@
 **Summarify - Text Summarization App**
 
 Summarify is an Android application designed to provide text summarization functionality. 
-It allows users to input text and receive a concise summary of the content. This readme file provides an overview of the application, its features, and instructions for installation and usage.
+It allows users to input text and receive a concise summary of the content. \
+This readme file provides an overview of the application, its features, and instructions for installation and usage.
 
 **Features**
 

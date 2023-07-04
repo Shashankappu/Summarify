@@ -32,7 +32,7 @@ public class SummarizedActivity extends AppCompatActivity {
     String input;
     boolean isMicOn = false;
     private TextToSpeech textToSpeech;
-    static int count=0;
+    static int count= 111;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference storeRef = database.getReference("Bookmarked_text");
 

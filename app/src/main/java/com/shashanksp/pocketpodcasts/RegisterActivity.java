@@ -54,11 +54,11 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Register User
-                boolean verfied = validatePassword(passwordedt.getText().toString(),cnfpasswordedt.getText().toString());
-                if(verfied && !emailedt.getText().toString().isEmpty()) {
-                    Register(emailedt.getText().toString(), passwordedt.getText().toString());
-                }else{
+                validatePassword(passwordedt.getText().toString(),cnfpasswordedt.getText().toString());
+                if(emailedt.getText().toString().isEmpty()) {
                     Toast.makeText(RegisterActivity.this,"Invalid Email or Password",Toast.LENGTH_LONG).show();
+                }else{
+                    Register(emailedt.getText().toString(), passwordedt.getText().toString());
                 }
             }
         });
@@ -126,14 +126,11 @@ public class RegisterActivity extends AppCompatActivity {
 
     private boolean validatePassword(String pass, String cnfpass) {
         if(!pass.isEmpty() && !cnfpass.isEmpty()){
-            if(pass == cnfpass){
-                return true;
-            }
+            return pass.equals(cnfpass);
         }else{
             Toast.makeText(RegisterActivity.this,"Password Don't match",Toast.LENGTH_LONG).show();
             return false;
         }
-        return false;
     }
 
     private void  Register(String email,String password){

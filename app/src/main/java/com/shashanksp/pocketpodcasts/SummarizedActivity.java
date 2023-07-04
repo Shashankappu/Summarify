@@ -1,11 +1,5 @@
 package com.shashanksp.pocketpodcasts;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
-
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.ClipData;
@@ -18,23 +12,27 @@ import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.shashanksp.pocketpodcasts.databinding.ActivitySummarizedBinding;
 
-import java.util.Locale;
-
 
 public class SummarizedActivity extends AppCompatActivity {
     ClipboardManager clipboardManager;
     String input;
-    boolean isMicOn = false;
-    private TextToSpeech textToSpeech;
-    static int count= 111;
+    private static TextToSpeech textToSpeech;
+    static int count = 111;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference storeRef = database.getReference("Bookmarked_text");
+
 
 
     @Override
@@ -54,8 +52,8 @@ public class SummarizedActivity extends AppCompatActivity {
             public void onInit(int status) {
                 if (status == TextToSpeech.SUCCESS) {
                     // TTS initialization successful
-                    textToSpeech.setLanguage(Locale.UK);
-                    textToSpeech.setSpeechRate(0.7F);
+                    textToSpeech.setSpeechRate(0.8F);
+                    textToSpeech.setVoice(textToSpeech.getVoice());
                 } else {
                     // TTS initialization failed
                 }
@@ -65,18 +63,16 @@ public class SummarizedActivity extends AppCompatActivity {
         binding.micBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!isMicOn) {
+                if (!textToSpeech.isSpeaking()) {
                     createNotificationChannel();
                     showTTSNotification();
                     convertTextToSpeech(binding.resText.getText().toString());
 
                     binding.micBtn.setImageDrawable(getResources().getDrawable(R.drawable.mic_on));
-                    isMicOn = true;
                 } else {
                     textToSpeech.stop();
                     hideTTSNotification();
                     binding.micBtn.setImageDrawable(getResources().getDrawable(R.drawable.mic_off));
-                    isMicOn = false;
                 }
             }
         });
@@ -180,6 +176,5 @@ public class SummarizedActivity extends AppCompatActivity {
             }
         });
     }
-
 
 }

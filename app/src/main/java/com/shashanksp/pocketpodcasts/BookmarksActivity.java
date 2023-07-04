@@ -6,9 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,14 +19,17 @@ import java.util.ArrayList;
 public class BookmarksActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference storeRef = database.getReference("Bookmarked_text");
+
     ArrayList<String> ArrayOfBookmarks = new ArrayList<>();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityBookmarksBinding binding = ActivityBookmarksBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        ArrayAdapter<String> bookAdapter = new ArrayAdapter<String>(BookmarksActivity.this, android.R.layout.simple_list_item_1,ArrayOfBookmarks);
+        ArrayAdapter<String> bookAdapter = new ArrayAdapter<>(BookmarksActivity.this, android.R.layout.simple_list_item_1,ArrayOfBookmarks);
         binding.bookmarksLV.setAdapter(bookAdapter);
 
         storeRef.addChildEventListener(new ChildEventListener() {

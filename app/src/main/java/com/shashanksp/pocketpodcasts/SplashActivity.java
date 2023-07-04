@@ -1,10 +1,9 @@
 package com.shashanksp.pocketpodcasts;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.shashanksp.pocketpodcasts.databinding.ActivitySplashBinding;
 
@@ -19,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
         Thread timerThread = new Thread() {
             public void run() {
                 try {
-                    sleep(3000);//splash time
+                    sleep(2700);//splash time
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {

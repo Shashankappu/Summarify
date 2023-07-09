@@ -53,9 +53,9 @@ public class SummarizedActivity extends AppCompatActivity {
                 if (status == TextToSpeech.SUCCESS) {
                     // TTS initialization successful
                     textToSpeech.setSpeechRate(0.8F);
-                    textToSpeech.setVoice(textToSpeech.getVoice());
                 } else {
                     // TTS initialization failed
+                    Toast.makeText(SummarizedActivity.this,"TTS Initialization Failed!",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -67,7 +67,6 @@ public class SummarizedActivity extends AppCompatActivity {
                     createNotificationChannel();
                     showTTSNotification();
                     convertTextToSpeech(binding.resText.getText().toString());
-
                     binding.micBtn.setImageDrawable(getResources().getDrawable(R.drawable.mic_on));
                 } else {
                     textToSpeech.stop();

@@ -73,11 +73,11 @@
                 android:id="@+id/paste_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/paste_btn"
+                android:src="@drawable/note_add"
                 android:background="@color/white"
                 android:layout_marginTop="15dp"
                 android:layout_gravity="end"
-                android:alpha="0.7"
+                android:alpha="0.65"
                 android:layout_marginEnd="15dp" />
         </androidx.cardview.widget.CardView>
 

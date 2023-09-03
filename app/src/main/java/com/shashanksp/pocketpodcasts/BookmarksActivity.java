@@ -7,6 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -18,7 +21,9 @@ import java.util.ArrayList;
 
 public class BookmarksActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference storeRef = database.getReference("Bookmarked_text");
+    FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+    DatabaseReference userBookmarksRef;
+    String userUID = currentUser.getUid();
 
     ArrayList<String> ArrayOfBookmarks = new ArrayList<>();
 
@@ -31,8 +36,12 @@ public class BookmarksActivity extends AppCompatActivity {
 
         ArrayAdapter<String> bookAdapter = new ArrayAdapter<>(BookmarksActivity.this, android.R.layout.simple_list_item_1,ArrayOfBookmarks);
         binding.bookmarksLV.setAdapter(bookAdapter);
+        // Get the user's UID
 
-        storeRef.addChildEventListener(new ChildEventListener() {
+
+        // Reference the user's bookmarks
+        userBookmarksRef = database.getReference("Users").child(userUID).child("Bookmarks");
+        userBookmarksRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 String value = snapshot.getValue(String.class);

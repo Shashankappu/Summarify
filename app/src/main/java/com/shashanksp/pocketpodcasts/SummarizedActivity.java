@@ -20,6 +20,8 @@ import androidx.core.app.NotificationManagerCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.shashanksp.pocketpodcasts.databinding.ActivitySummarizedBinding;
@@ -29,9 +31,12 @@ public class SummarizedActivity extends AppCompatActivity {
     ClipboardManager clipboardManager;
     String input;
     private static TextToSpeech textToSpeech;
-    static int count = 111;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference storeRef = database.getReference("Bookmarked_text");
+    FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+    String userUID = currentUser.getUid();
+    DatabaseReference userBookmarksRef = FirebaseDatabase.getInstance().getReference("Users")
+            .child(userUID)
+            .child("Bookmarks");
 
 
 
@@ -168,12 +173,17 @@ public class SummarizedActivity extends AppCompatActivity {
         notificationManager.cancel(1); // Cancels the notification with the specified ID (1 in this case)
     }
     private void addToBookmarks(String summ_text){
-        storeRef.child(String.valueOf(count++)).setValue(summ_text).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(SummarizedActivity.this,"Text Bookmarked!",Toast.LENGTH_LONG).show();
-            }
-        });
+            DatabaseReference newBookmarkRef = userBookmarksRef.push(); // Generate a unique key
+            newBookmarkRef.setValue(summ_text).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(SummarizedActivity.this, "Text Bookmarked!", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(SummarizedActivity.this, "Error bookmarking text", Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
     }
 
 }
